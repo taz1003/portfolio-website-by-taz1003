@@ -1,6 +1,82 @@
-body {
-    background-color: grey;
+/* setting CSS Variables */
+:root {
+	--ink: #0f0e0c; /* text */
+	--paper: #f5f2eb; /* background */
+	--cream: #ede9df; /* cards */
+	--accent: #c84b2f; /* main color */
+	--gold: #b8963e; /* secondary color */
+	--muted: #7a7469; /* body text */
+	--rule: #d4cfc4; /* border */
+
+	/* font stuff */
+	--font-serif: "DM Serif Display", serif;
+	--font-mono: "DM Mono", monospace;
+	--font-sans: "Instrument Sans", sans-serif;
 }
-body > p {
-    font-family: DM Serif Display, serif;
+
+/* Base Styles */
+/* scroll behavior */
+html {
+	scroll-behavior: smooth;
+}
+body {
+	background: var(--paper);
+	color: var(--ink);
+	font-family: var(--font-sans);
+	overflow-x: hidden;
+}
+/* scrollbar */
+::-webkit-scrollbar {
+	width: 5px;
+}
+::-webkit-scrollbar-track {
+	background: var(--cream);
+}
+::-webkit-scrollbar-thumb {
+	background: var(--gold);
+	border-radius: 3px;
+}
+/* navbar */
+.navbar {
+	background: rgba(245, 242, 235, 0.88) !important;
+	backdrop-filter: blur(14px);
+	border-bottom: 1px solid var(--rule);
+	padding: 0.9rem 0;
+}
+.navbar-brand {
+	font-family: var(--font-mono);
+	font-size: 0.78rem;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: var(--muted) !important;
+}
+.navbar-brand span {
+	color: var(--accent);
+}
+.nav-link {
+	font-family: var(--font-mono);
+	font-size: 0.68rem;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	color: var(--muted) !important;
+	position: relative;
+	padding: 0.3rem 0 !important;
+	margin: 0 1rem;
+	transition: color 0.2s;
+}
+.nav-link::after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 0;
+	height: 1px;
+	background: var(--accent);
+	transition: width 0.3s;
+}
+.nav-link:hover {
+	color: var(--ink) !important;
+}
+.nav-link:hover::after {
+	width: 100%;
 }

@@ -45,9 +45,8 @@ body {
 }
 .navbar-brand {
 	font-family: var(--font-mono);
-	font-size: 0.78rem;
+	font-size: 0.88rem;
 	letter-spacing: 0.18em;
-	text-transform: uppercase;
 	color: var(--muted) !important;
 }
 .navbar-brand span {
@@ -55,7 +54,7 @@ body {
 }
 .nav-link {
 	font-family: var(--font-mono);
-	font-size: 0.68rem;
+	font-size: 0.88rem;
 	letter-spacing: 0.14em;
 	text-transform: uppercase;
 	color: var(--muted) !important;

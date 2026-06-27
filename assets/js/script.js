@@ -1,4 +1,4 @@
-emailjs.init("YOUR_PUBLIC_KEY");
+emailjs.init("uXOeYAky9LtqQR_EG");
 function sendMail(contactForm) {
   emailjs
     .send("service_xe3eg9i", "rosie", {

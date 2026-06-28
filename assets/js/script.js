@@ -131,3 +131,70 @@ if (featuredProjects) {
         `;
 	});
 }
+
+// -------------------------------------Projects Page Script-------------------------------------
+const projectsContainer = document.getElementById("projects-container");
+
+function renderProjects(projectList) {
+	if (!projectsContainer) return;
+
+	projectsContainer.innerHTML = "";
+
+	projectList.forEach((project) => {
+		const badges = project.technologies
+
+			.map((tech) => `<span class="badge text-bg-primary me-1">${tech}</span>`)
+
+			.join("");
+
+		projectsContainer.innerHTML += `
+
+        <div class="col-md-6 col-lg-4">
+
+            <div class="project-card">
+
+                <img
+
+                    src="${project.image}"
+
+                    class="img-fluid"
+
+                    alt="${project.title}">
+
+                <div class="p-4">
+
+                    <h4>
+
+                        ${project.title}
+
+                    </h4>
+
+                    <p class="text-secondary">
+
+                        ${project.description}
+
+                    </p>
+
+                    <div class="mb-3">
+
+                        ${badges}
+
+                    </div>
+
+                    <button
+                        class="btn btn-primary">
+
+                        View Project
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        `;
+	});
+}
+renderProjects(projects);

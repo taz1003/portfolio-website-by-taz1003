@@ -137,3 +137,75 @@ section {
 .cta-section {
 	background: linear-gradient(135deg, #4f46e5, #06b6d4);
 }
+
+.timeline {
+	max-width: 700px;
+
+	margin: auto;
+
+	position: relative;
+
+	padding-left: 40px;
+
+	border-left: 3px solid var(--primary);
+}
+
+.timeline-item {
+	position: relative;
+
+	margin-bottom: 50px;
+}
+
+.timeline-dot {
+	position: absolute;
+
+	left: -52px;
+
+	width: 18px;
+
+	height: 18px;
+
+	background: var(--primary);
+
+	border-radius: 50%;
+}
+
+.timeline-content {
+	background: white;
+
+	padding: 25px;
+
+	border-radius: 15px;
+
+	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+#topBtn {
+	position: fixed;
+
+	bottom: 25px;
+
+	right: 25px;
+
+	width: 50px;
+
+	height: 50px;
+
+	border: none;
+
+	border-radius: 50%;
+
+	background: var(--primary);
+
+	color: white;
+
+	display: none;
+
+	z-index: 999;
+
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+footer a {
+	text-decoration: none;
+}

@@ -209,3 +209,31 @@ section {
 footer a {
 	text-decoration: none;
 }
+
+/* ============================================================================ Projects.html */
+
+.project-hero {
+	padding: 120px 0 80px;
+
+	background: radial-gradient(circle at top, #dbeafe, transparent), #f7f8fa;
+}
+
+.project-hero h1 {
+	margin-bottom: 20px;
+}
+
+.filter-btn {
+	border-radius: 50px;
+
+	padding: 10px 24px;
+}
+
+.project-card {
+	height: 100%;
+}
+
+.project-card img {
+	height: 240px;
+
+	object-fit: cover;
+}

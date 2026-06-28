@@ -85,3 +85,55 @@ section {
 #about img:hover {
 	transform: scale(1.03);
 }
+
+.service-card {
+	background: white;
+
+	border-radius: 20px;
+
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+
+	transition: 0.35s;
+}
+
+.service-card:hover {
+	transform: translateY(-10px);
+
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.project-card {
+	background: white;
+
+	border-radius: 20px;
+
+	overflow: hidden;
+
+	transition: 0.35s;
+
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.project-card:hover {
+	transform: translateY(-10px);
+
+	box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+.project-card img {
+	height: 220px;
+
+	width: 100%;
+
+	object-fit: cover;
+}
+
+.badge {
+	margin-right: 6px;
+
+	padding: 8px 12px;
+}
+
+.cta-section {
+	background: linear-gradient(135deg, #4f46e5, #06b6d4);
+}

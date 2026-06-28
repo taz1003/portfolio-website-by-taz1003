@@ -1,3 +1,7 @@
+html {
+	scroll-behavior: smooth;
+}
+
 :root {
 	--primary: #4f46e5;
 	--accent: #06b6d4;
@@ -38,4 +42,46 @@ h5 {
 
 img {
 	max-width: 100%;
+}
+
+section {
+	overflow: hidden;
+}
+
+.text-primary {
+	color: var(--primary) !important;
+}
+
+.hero {
+	background:
+		radial-gradient(circle at top right, #dbeafe 0%, transparent 40%),
+		radial-gradient(circle at bottom left, #ede9fe 0%, transparent 45%), var(--bg);
+}
+
+.skill-card {
+	background: white;
+
+	border-radius: 20px;
+
+	transition: 0.35s;
+
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.skill-card:hover {
+	transform: translateY(-10px);
+
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.skill-card i {
+	color: var(--primary);
+}
+
+#about img {
+	transition: 0.4s;
+}
+
+#about img:hover {
+	transform: scale(1.03);
 }

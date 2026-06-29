@@ -30,6 +30,22 @@ h5 {
 	padding: 18px 0;
 }
 
+.project-page-btn {
+	border-radius: 50px;
+
+	padding: 10px 24px;
+
+	font-weight: 600;
+
+	transition: all 0.3s ease;
+}
+
+.project-page-btn:hover {
+	transform: translateY(-2px);
+
+	box-shadow: 0 10px 25px rgba(79, 70, 229, 0.25);
+}
+
 .hero {
 	padding-top: 80px;
 }
@@ -236,4 +252,24 @@ footer a {
 	height: 240px;
 
 	object-fit: cover;
+}
+
+/* ================== Modal */
+.modal-content {
+	border: none;
+	border-radius: 20px;
+}
+
+.modal-body img {
+	max-height: 500px;
+	width: 100%;
+	object-fit: cover;
+}
+
+.modal-body {
+	padding: 2rem;
+}
+
+#modalTech .badge {
+	font-size: 0.9rem;
 }

@@ -1,326 +1,330 @@
-// EmailJS integration
-function sendMail(contactForm) {
-	emailjs
-		.send("service_xe3eg9i", "rosie", {
-			from_name: contactForm.name.value,
-			email: contactForm.emailaddress.value,
-			project_request: contactForm.projectsummary.value,
-		})
-		.then(
-			function (response) {
-				console.log("SUCCESS", response);
-			},
-			function (error) {
-				console.log("FAILED", error);
-			},
-		);
-	// return false; // To block from loading a new page
-}
-
-// Scroll to top button
-const topBtn = document.getElementById("topBtn");
-
-window.addEventListener("scroll", () => {
-	if (window.scrollY > 400) {
-		topBtn.style.display = "block";
-	} else {
-		topBtn.style.display = "none";
-	}
+document.addEventListener("DOMContentLoaded", () => {
+	console.log("Portfolio loaded successfully.");
 });
 
-topBtn.addEventListener("click", () => {
-	window.scrollTo({
-		top: 0,
+// // EmailJS integration
+// function sendMail(contactForm) {
+// 	emailjs
+// 		.send("service_xe3eg9i", "rosie", {
+// 			from_name: contactForm.name.value,
+// 			email: contactForm.emailaddress.value,
+// 			project_request: contactForm.projectsummary.value,
+// 		})
+// 		.then(
+// 			function (response) {
+// 				console.log("SUCCESS", response);
+// 			},
+// 			function (error) {
+// 				console.log("FAILED", error);
+// 			},
+// 		);
+// 	// return false; // To block from loading a new page
+// }
 
-		behavior: "smooth",
-	});
-});
+// // Scroll to top button
+// const topBtn = document.getElementById("topBtn");
 
-// Projects cards list
-const projects = [
-	{
-		id: 1,
+// window.addEventListener("scroll", () => {
+// 	if (window.scrollY > 400) {
+// 		topBtn.style.display = "block";
+// 	} else {
+// 		topBtn.style.display = "none";
+// 	}
+// });
 
-		title: "Breast Cancer Analysis Dashboard",
+// topBtn.addEventListener("click", () => {
+// 	window.scrollTo({
+// 		top: 0,
 
-		shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+// 		behavior: "smooth",
+// 	});
+// });
 
-		fullDescription:
-			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius officiis molestiae, beatae numquam deleniti voluptatem. Lorem ipsum dolor sit amet.",
+// // Projects cards list
+// const projects = [
+// 	{
+// 		id: 1,
 
-		image: "https://placehold.co/900x600",
+// 		title: "Breast Cancer Analysis Dashboard",
 
-		technologies: ["Streamlit", "SQL", "Python"],
+// 		shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
-		problem: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+// 		fullDescription:
+// 			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius officiis molestiae, beatae numquam deleniti voluptatem. Lorem ipsum dolor sit amet.",
 
-		solution: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+// 		image: "https://placehold.co/900x600",
 
-		insights: ["Lorem ipsum dolor sit amet.", "Lorem ipsum dolor sit amet.", "Lorem ipsum dolor sit amet."],
+// 		technologies: ["Streamlit", "SQL", "Python"],
 
-		github: "#",
+// 		problem: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
-		live: "#",
-	},
+// 		solution: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
-	{
-		id: 2,
+// 		insights: ["Lorem ipsum dolor sit amet.", "Lorem ipsum dolor sit amet.", "Lorem ipsum dolor sit amet."],
 
-		title: "Customer Churn Dashboard",
+// 		github: "#",
 
-		shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+// 		live: "#",
+// 	},
 
-		fullDescription:
-			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius officiis molestiae, beatae numquam deleniti voluptatem. Lorem ipsum dolor sit amet.",
+// 	{
+// 		id: 2,
 
-		image: "https://placehold.co/900x600",
+// 		title: "Customer Churn Dashboard",
 
-		technologies: ["Power BI", "SQL", "Python"],
+// 		shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
-		problem: "asdfkjashdflkjasdhflksjt.",
+// 		fullDescription:
+// 			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius officiis molestiae, beatae numquam deleniti voluptatem. Lorem ipsum dolor sit amet.",
 
-		solution: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+// 		image: "https://placehold.co/900x600",
 
-		insights: ["dfgsdfgdsfg", "Lorem ipsum dolor sit amet.", "Lorem ipsum dolor sit amet."],
+// 		technologies: ["Power BI", "SQL", "Python"],
 
-		github: "#",
+// 		problem: "asdfkjashdflkjasdhflksjt.",
 
-		live: "#",
-	},
+// 		solution: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
-	{
-		id: 3,
+// 		insights: ["dfgsdfgdsfg", "Lorem ipsum dolor sit amet.", "Lorem ipsum dolor sit amet."],
 
-		title: "Sales Performance Analysis",
+// 		github: "#",
 
-		shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+// 		live: "#",
+// 	},
 
-		fullDescription:
-			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius officiis molestiae, beatae numquam deleniti voluptatem. Lorem ipsum dolor sit amet.",
+// 	{
+// 		id: 3,
 
-		image: "https://placehold.co/900x600",
+// 		title: "Sales Performance Analysis",
 
-		technologies: ["Streamlit", "SQL", "Python"],
+// 		shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
-		problem: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+// 		fullDescription:
+// 			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius officiis molestiae, beatae numquam deleniti voluptatem. Lorem ipsum dolor sit amet.",
 
-		solution: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+// 		image: "https://placehold.co/900x600",
 
-		insights: ["Lorem ipsum dolor sit amet.", "Lorem ipsum dolor sit amet.", "Lorem ipsum dolor sit amet."],
+// 		technologies: ["Streamlit", "SQL", "Python"],
 
-		github: "#",
+// 		problem: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
-		live: "#",
-	},
+// 		solution: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
-	{
-		id: 4,
+// 		insights: ["Lorem ipsum dolor sit amet.", "Lorem ipsum dolor sit amet.", "Lorem ipsum dolor sit amet."],
 
-		title: "HR Analytics Dashboard",
+// 		github: "#",
 
-		shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+// 		live: "#",
+// 	},
 
-		fullDescription:
-			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius officiis molestiae, beatae numquam deleniti voluptatem. Lorem ipsum dolor sit amet.",
+// 	{
+// 		id: 4,
 
-		image: "https://placehold.co/900x600",
+// 		title: "HR Analytics Dashboard",
 
-		technologies: ["Power BI", "SQL", "Python"],
+// 		shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
-		problem: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+// 		fullDescription:
+// 			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius officiis molestiae, beatae numquam deleniti voluptatem. Lorem ipsum dolor sit amet.",
 
-		solution: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+// 		image: "https://placehold.co/900x600",
 
-		insights: ["Lorem ipsum dolor sit amet.", "Lorem ipsum dolor sit amet.", "Lorem ipsum dolor sit amet."],
+// 		technologies: ["Power BI", "SQL", "Python"],
 
-		github: "#",
+// 		problem: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
-		live: "#",
-	},
+// 		solution: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
-	{
-		id: 5,
+// 		insights: ["Lorem ipsum dolor sit amet.", "Lorem ipsum dolor sit amet.", "Lorem ipsum dolor sit amet."],
 
-		title: "Market Data Dashboard",
+// 		github: "#",
 
-		shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+// 		live: "#",
+// 	},
 
-		fullDescription:
-			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius officiis molestiae, beatae numquam deleniti voluptatem. Lorem ipsum dolor sit amet.",
+// 	{
+// 		id: 5,
 
-		image: "https://placehold.co/900x600",
+// 		title: "Market Data Dashboard",
 
-		technologies: ["Power BI", "SQL", "Python"],
+// 		shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
-		problem: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+// 		fullDescription:
+// 			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius officiis molestiae, beatae numquam deleniti voluptatem. Lorem ipsum dolor sit amet.",
 
-		solution: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+// 		image: "https://placehold.co/900x600",
 
-		insights: ["Lorem ipsum dolor sit amet.", "Lorem ipsum dolor sit amet.", "Lorem ipsum dolor sit amet."],
+// 		technologies: ["Power BI", "SQL", "Python"],
 
-		github: "#",
+// 		problem: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
-		live: "#",
-	},
+// 		solution: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
-	{
-		id: 6,
+// 		insights: ["Lorem ipsum dolor sit amet.", "Lorem ipsum dolor sit amet.", "Lorem ipsum dolor sit amet."],
 
-		title: "Fruits and Vegetables Sales Dashboard",
+// 		github: "#",
 
-		shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+// 		live: "#",
+// 	},
 
-		fullDescription:
-			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius officiis molestiae, beatae numquam deleniti voluptatem. Lorem ipsum dolor sit amet.",
+// 	{
+// 		id: 6,
 
-		image: "https://placehold.co/900x600",
+// 		title: "Fruits and Vegetables Sales Dashboard",
 
-		technologies: ["Power BI", "SQL", "Python"],
+// 		shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
-		problem: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+// 		fullDescription:
+// 			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius officiis molestiae, beatae numquam deleniti voluptatem. Lorem ipsum dolor sit amet.",
 
-		solution: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+// 		image: "https://placehold.co/900x600",
 
-		insights: ["Lorem ipsum dolor sit amet.", "Lorem ipsum dolor sit amet.", "Lorem ipsum dolor sit amet."],
+// 		technologies: ["Power BI", "SQL", "Python"],
 
-		github: "#",
+// 		problem: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
-		live: "#",
-	},
-];
+// 		solution: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
-// Automatically create project cards
-const featuredProjects = document.getElementById("featured-projects");
+// 		insights: ["Lorem ipsum dolor sit amet.", "Lorem ipsum dolor sit amet.", "Lorem ipsum dolor sit amet."],
 
-if (featuredProjects) {
-	projects.forEach((project) => {
-		const badges = project.technologies.map((tech) => `<span class="badge text-bg-primary me-1">${tech}</span>`).join("");
+// 		github: "#",
 
-		featuredProjects.innerHTML += `
+// 		live: "#",
+// 	},
+// ];
 
-		<div class="col-md-6 col-lg-4">
-			<div class="project-card h-100">
-				<img src="${project.image}" class="img-fluid rounded-top" alt="${project.title}" />
-			
-				<div class="p-4">
-					<h4>${project.title}</h4>
-			
-					<p class="text-secondary">${project.shortDescription}</p>
-			
-					<div class="mb-3">${badges}</div>
-			
-					<button class="btn btn-sm btn-primary view-project" data-id="${project.id}">View Details</button>
-				</div>
-			</div>
-		</div>
+// // Automatically create project cards
+// const featuredProjects = document.getElementById("featured-projects");
 
-        `;
-	});
-}
+// if (featuredProjects) {
+// 	projects.forEach((project) => {
+// 		const badges = project.technologies.map((tech) => `<span class="badge text-bg-primary me-1">${tech}</span>`).join("");
 
-// -------------------------------------Projects Page Script-------------------------------------
-const projectsContainer = document.getElementById("projects-container");
+// 		featuredProjects.innerHTML += `
 
-function renderProjects(projectList) {
-	if (!projectsContainer) return;
+// 		<div class="col-md-6 col-lg-4">
+// 			<div class="project-card h-100">
+// 				<img src="${project.image}" class="img-fluid rounded-top" alt="${project.title}" />
 
-	projectsContainer.innerHTML = "";
+// 				<div class="p-4">
+// 					<h4>${project.title}</h4>
 
-	projectList.forEach((project) => {
-		const badges = project.technologies
+// 					<p class="text-secondary">${project.shortDescription}</p>
 
-			.map((tech) => `<span class="badge text-bg-primary me-1">${tech}</span>`)
+// 					<div class="mb-3">${badges}</div>
 
-			.join("");
+// 					<button class="btn btn-sm btn-primary view-project" data-id="${project.id}">View Details</button>
+// 				</div>
+// 			</div>
+// 		</div>
 
-		projectsContainer.innerHTML += `
+//         `;
+// 	});
+// }
 
-		<div class="col-md-6 col-lg-4">
-			<div class="project-card">
-				<img src="${project.image}" class="img-fluid" alt="${project.title}" />
+// // -------------------------------------Projects Page Script-------------------------------------
+// const projectsContainer = document.getElementById("projects-container");
 
-				<div class="p-4">
-					<h4>${project.title}</h4>
+// function renderProjects(projectList) {
+// 	if (!projectsContainer) return;
 
-					<p class="text-secondary">${project.shortDescription}</p>
+// 	projectsContainer.innerHTML = "";
 
-					<div class="mb-3">${badges}</div>
+// 	projectList.forEach((project) => {
+// 		const badges = project.technologies
 
-					<button class="btn btn-primary view-project" data-id="${project.id}">View Project</button>
-				</div>
-			</div>
-		</div>
+// 			.map((tech) => `<span class="badge text-bg-primary me-1">${tech}</span>`)
 
-        `;
-	});
-}
-renderProjects(projects);
+// 			.join("");
 
-// Filter projects by technology
-const filterButtons = document.querySelectorAll(".filter-btn");
+// 		projectsContainer.innerHTML += `
 
-filterButtons.forEach((button) => {
-	button.addEventListener("click", () => {
-		filterButtons.forEach((btn) => {
-			btn.classList.remove("btn-primary");
+// 		<div class="col-md-6 col-lg-4">
+// 			<div class="project-card">
+// 				<img src="${project.image}" class="img-fluid" alt="${project.title}" />
 
-			btn.classList.add("btn-outline-primary");
-		});
+// 				<div class="p-4">
+// 					<h4>${project.title}</h4>
 
-		button.classList.remove("btn-outline-primary");
+// 					<p class="text-secondary">${project.shortDescription}</p>
 
-		button.classList.add("btn-primary");
+// 					<div class="mb-3">${badges}</div>
 
-		const filter = button.dataset.filter;
+// 					<button class="btn btn-primary view-project" data-id="${project.id}">View Project</button>
+// 				</div>
+// 			</div>
+// 		</div>
 
-		if (filter === "All") {
-			renderProjects(projects);
+//         `;
+// 	});
+// }
+// renderProjects(projects);
 
-			return;
-		}
+// // Filter projects by technology
+// const filterButtons = document.querySelectorAll(".filter-btn");
 
-		const filtered = projects.filter((project) => project.technologies.includes(filter));
+// filterButtons.forEach((button) => {
+// 	button.addEventListener("click", () => {
+// 		filterButtons.forEach((btn) => {
+// 			btn.classList.remove("btn-primary");
 
-		renderProjects(filtered);
-	});
-});
+// 			btn.classList.add("btn-outline-primary");
+// 		});
 
-// Bootstrap Modal functionality
-document.addEventListener("click", function (e) {
-	if (!e.target.classList.contains("view-project")) return;
+// 		button.classList.remove("btn-outline-primary");
 
-	const id = Number(e.target.dataset.id);
+// 		button.classList.add("btn-primary");
 
-	const project = projects.find((p) => p.id === id);
+// 		const filter = button.dataset.filter;
 
-	document.getElementById("modalTitle").textContent = project.title;
+// 		if (filter === "All") {
+// 			renderProjects(projects);
 
-	document.getElementById("modalImage").src = project.image;
+// 			return;
+// 		}
 
-	document.getElementById("modalDescription").textContent = project.fullDescription;
+// 		const filtered = projects.filter((project) => project.technologies.includes(filter));
 
-	document.getElementById("modalProblem").textContent = project.problem;
+// 		renderProjects(filtered);
+// 	});
+// });
 
-	document.getElementById("modalSolution").textContent = project.solution;
+// // Bootstrap Modal functionality
+// document.addEventListener("click", function (e) {
+// 	if (!e.target.classList.contains("view-project")) return;
 
-	document.getElementById("modalTech").innerHTML = project.technologies
-		.map((t) => `<span class="badge text-bg-primary me-2">${t}</span>`)
-		.join("");
+// 	const id = Number(e.target.dataset.id);
 
-	document.getElementById("modalInsights").innerHTML = project.insights.map((i) => `<li>${i}</li>`).join("");
+// 	const project = projects.find((p) => p.id === id);
 
-	document.getElementById("githubBtn").href = project.github;
+// 	document.getElementById("modalTitle").textContent = project.title;
 
-	document.getElementById("liveBtn").href = project.live;
+// 	document.getElementById("modalImage").src = project.image;
 
-	const modal = new bootstrap.Modal(document.getElementById("projectModal"));
+// 	document.getElementById("modalDescription").textContent = project.fullDescription;
 
-	modal.show();
-});
+// 	document.getElementById("modalProblem").textContent = project.problem;
 
-// Initialize Bootstrap tooltips
-const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+// 	document.getElementById("modalSolution").textContent = project.solution;
 
-tooltipTriggerList.forEach((tooltipTriggerEl) => {
-	new bootstrap.Tooltip(tooltipTriggerEl);
-});
+// 	document.getElementById("modalTech").innerHTML = project.technologies
+// 		.map((t) => `<span class="badge text-bg-primary me-2">${t}</span>`)
+// 		.join("");
+
+// 	document.getElementById("modalInsights").innerHTML = project.insights.map((i) => `<li>${i}</li>`).join("");
+
+// 	document.getElementById("githubBtn").href = project.github;
+
+// 	document.getElementById("liveBtn").href = project.live;
+
+// 	const modal = new bootstrap.Modal(document.getElementById("projectModal"));
+
+// 	modal.show();
+// });
+
+// // Initialize Bootstrap tooltips
+// const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+
+// tooltipTriggerList.forEach((tooltipTriggerEl) => {
+// 	new bootstrap.Tooltip(tooltipTriggerEl);
+// });

@@ -439,6 +439,43 @@
 			</div>
 		</section>
 
+		<!-- Bootstrap modal for project details -->
+		<div class="modal fade" id="projectModal" tabindex="-1">
+			<div class="modal-dialog modal-xl modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3 class="modal-title" id="modalTitle"></h3>
+
+						<button class="btn-close" data-bs-dismiss="modal"></button>
+					</div>
+
+					<div class="modal-body">
+						<img id="modalImage" class="img-fluid rounded mb-4" />
+
+						<p id="modalDescription"></p>
+
+						<h5 class="mt-4">Problem</h5>
+
+						<p id="modalProblem"></p>
+
+						<h5 class="mt-4">Solution</h5>
+
+						<p id="modalSolution"></p>
+
+						<h5 class="mt-4">Key Insights</h5>
+
+						<ul id="modalInsights"></ul>
+
+						<div id="modalTech" class="my-4"></div>
+
+						<a id="githubBtn" target="_blank" class="btn btn-dark me-2"> GitHub </a>
+
+						<a id="liveBtn" target="_blank" class="btn btn-primary"> Live Demo </a>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<!-- Footer -->
 		<footer class="bg-dark text-white py-5">
 			<div class="container text-center">

@@ -39,45 +39,153 @@ topBtn.addEventListener("click", () => {
 // Projects cards list
 const projects = [
 	{
+		id: 1,
+
 		title: "Customer Churn Dashboard",
-		description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-		image: "https://placehold.co/600x400",
+
+		shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+
+		fullDescription:
+			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius officiis molestiae, beatae numquam deleniti voluptatem. Lorem ipsum dolor sit amet.",
+
+		image: "https://placehold.co/900x600",
+
 		technologies: ["Power BI", "SQL", "Python"],
+
+		problem: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+
+		solution: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+
+		insights: ["Lorem ipsum dolor sit amet.", "Lorem ipsum dolor sit amet.", "Lorem ipsum dolor sit amet."],
+
+		github: "#",
+
+		live: "#",
 	},
 
 	{
-		title: "Sales Performance Analysis",
-		description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-		image: "https://placehold.co/600x400",
-		technologies: ["Excel", "SQL"],
+		id: 2,
+
+		title: "Customer Churn Dashboard",
+
+		shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+
+		fullDescription:
+			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius officiis molestiae, beatae numquam deleniti voluptatem. Lorem ipsum dolor sit amet.",
+
+		image: "https://placehold.co/900x600",
+
+		technologies: ["Power BI", "SQL", "Python"],
+
+		problem: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+
+		solution: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+
+		insights: ["Lorem ipsum dolor sit amet.", "Lorem ipsum dolor sit amet.", "Lorem ipsum dolor sit amet."],
+
+		github: "#",
+
+		live: "#",
 	},
 
 	{
-		title: "HR Analytics",
-		description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-		image: "https://placehold.co/600x400",
-		technologies: ["Power BI", "Excel"],
+		id: 3,
+
+		title: "Customer Churn Dashboard",
+
+		shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+
+		fullDescription:
+			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius officiis molestiae, beatae numquam deleniti voluptatem. Lorem ipsum dolor sit amet.",
+
+		image: "https://placehold.co/900x600",
+
+		technologies: ["Power BI", "SQL", "Python"],
+
+		problem: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+
+		solution: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+
+		insights: ["Lorem ipsum dolor sit amet.", "Lorem ipsum dolor sit amet.", "Lorem ipsum dolor sit amet."],
+
+		github: "#",
+
+		live: "#",
 	},
 
 	{
-		title: "Financial Dashboard",
-		description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-		image: "https://placehold.co/600x400",
-		technologies: ["Power BI", "SQL"],
+		id: 4,
+
+		title: "Customer Churn Dashboard",
+
+		shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+
+		fullDescription:
+			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius officiis molestiae, beatae numquam deleniti voluptatem. Lorem ipsum dolor sit amet.",
+
+		image: "https://placehold.co/900x600",
+
+		technologies: ["Power BI", "SQL", "Python"],
+
+		problem: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+
+		solution: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+
+		insights: ["Lorem ipsum dolor sit amet.", "Lorem ipsum dolor sit amet.", "Lorem ipsum dolor sit amet."],
+
+		github: "#",
+
+		live: "#",
 	},
 
 	{
-		title: "Netflix Data Exploration",
-		description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-		image: "https://placehold.co/600x400",
-		technologies: ["Python", "Pandas"],
+		id: 5,
+
+		title: "Customer Churn Dashboard",
+
+		shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+
+		fullDescription:
+			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius officiis molestiae, beatae numquam deleniti voluptatem. Lorem ipsum dolor sit amet.",
+
+		image: "https://placehold.co/900x600",
+
+		technologies: ["Power BI", "SQL", "Python"],
+
+		problem: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+
+		solution: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+
+		insights: ["Lorem ipsum dolor sit amet.", "Lorem ipsum dolor sit amet.", "Lorem ipsum dolor sit amet."],
+
+		github: "#",
+
+		live: "#",
 	},
 
 	{
-		title: "Market Basket Analysis",
-		description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-		image: "https://placehold.co/600x400",
-		technologies: ["Python", "SQL"],
+		id: 6,
+
+		title: "Customer Churn Dashboard",
+
+		shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+
+		fullDescription:
+			"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius officiis molestiae, beatae numquam deleniti voluptatem. Lorem ipsum dolor sit amet.",
+
+		image: "https://placehold.co/900x600",
+
+		technologies: ["Power BI", "SQL", "Python"],
+
+		problem: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+
+		solution: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+
+		insights: ["Lorem ipsum dolor sit amet.", "Lorem ipsum dolor sit amet.", "Lorem ipsum dolor sit amet."],
+
+		github: "#",
+
+		live: "#",
 	},
 ];
 
@@ -105,7 +213,7 @@ if (featuredProjects) {
 
                     <p class="text-secondary">
 
-                        ${project.description}
+                        ${project.shortDescription}
 
                     </p>
 
@@ -171,7 +279,7 @@ function renderProjects(projectList) {
 
                     <p class="text-secondary">
 
-                        ${project.description}
+                        ${project.shortDescription}
 
                     </p>
 
@@ -182,7 +290,8 @@ function renderProjects(projectList) {
                     </div>
 
                     <button
-                        class="btn btn-primary">
+                        class="btn btn-primary view-project"
+    					data-id="${project.id}">
 
                         View Project
 
@@ -198,3 +307,32 @@ function renderProjects(projectList) {
 	});
 }
 renderProjects(projects);
+
+// Filter projects by technology
+const filterButtons = document.querySelectorAll(".filter-btn");
+
+filterButtons.forEach((button) => {
+	button.addEventListener("click", () => {
+		filterButtons.forEach((btn) => {
+			btn.classList.remove("btn-primary");
+
+			btn.classList.add("btn-outline-primary");
+		});
+
+		button.classList.remove("btn-outline-primary");
+
+		button.classList.add("btn-primary");
+
+		const filter = button.dataset.filter;
+
+		if (filter === "All") {
+			renderProjects(projects);
+
+			return;
+		}
+
+		const filtered = projects.filter((project) => project.technologies.includes(filter));
+
+		renderProjects(filtered);
+	});
+});

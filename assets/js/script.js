@@ -41,7 +41,7 @@ const projects = [
 	{
 		id: 1,
 
-		title: "Customer Churn Dashboard",
+		title: "Breast Cancer Analysis Dashboard",
 
 		shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
@@ -50,7 +50,7 @@ const projects = [
 
 		image: "https://placehold.co/900x600",
 
-		technologies: ["Power BI", "SQL", "Python"],
+		technologies: ["Streamlit", "SQL", "Python"],
 
 		problem: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
@@ -77,11 +77,11 @@ const projects = [
 
 		technologies: ["Power BI", "SQL", "Python"],
 
-		problem: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+		problem: "asdfkjashdflkjasdhflksjt.",
 
 		solution: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
-		insights: ["Lorem ipsum dolor sit amet.", "Lorem ipsum dolor sit amet.", "Lorem ipsum dolor sit amet."],
+		insights: ["dfgsdfgdsfg", "Lorem ipsum dolor sit amet.", "Lorem ipsum dolor sit amet."],
 
 		github: "#",
 
@@ -91,7 +91,7 @@ const projects = [
 	{
 		id: 3,
 
-		title: "Customer Churn Dashboard",
+		title: "Sales Performance Analysis",
 
 		shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
@@ -100,7 +100,7 @@ const projects = [
 
 		image: "https://placehold.co/900x600",
 
-		technologies: ["Power BI", "SQL", "Python"],
+		technologies: ["Streamlit", "SQL", "Python"],
 
 		problem: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
@@ -116,7 +116,7 @@ const projects = [
 	{
 		id: 4,
 
-		title: "Customer Churn Dashboard",
+		title: "HR Analytics Dashboard",
 
 		shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
@@ -141,7 +141,7 @@ const projects = [
 	{
 		id: 5,
 
-		title: "Customer Churn Dashboard",
+		title: "Market Data Dashboard",
 
 		shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
@@ -166,7 +166,7 @@ const projects = [
 	{
 		id: 6,
 
-		title: "Customer Churn Dashboard",
+		title: "Fruits and Vegetables Sales Dashboard",
 
 		shortDescription: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 
@@ -318,6 +318,7 @@ document.addEventListener("click", function (e) {
 	modal.show();
 });
 
+// Initialize Bootstrap tooltips
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
 
 tooltipTriggerList.forEach((tooltipTriggerEl) => {

@@ -8,9 +8,27 @@ const projectsContainer = document.getElementById("projects-container");
 // ==========================
 // Create Project Card
 // ==========================
+const techClasses = {
+	Python: "badge-python",
+	SQL: "badge-sql",
+	"Power BI": "badge-powerbi",
+	Excel: "badge-excel",
+	Pandas: "badge-pandas",
+	NumPy: "badge-numpy",
+	Tableau: "badge-tableau",
+	Bootstrap: "badge-bootstrap",
+	JavaScript: "badge-javascript",
+	HTML: "badge-html",
+	CSS: "badge-css",
+};
 
 function createProjectCard(project, buttonText = "View Details") {
-	const badges = project.technologies.map((tech) => `<span class="badge text-bg-primary me-1">${tech}</span>`).join("");
+	const badges = project.technologies
+		.map((tech) => {
+			const badgeClass = techClasses[tech] || "bg-secondary";
+			return `<span class="badge ${badgeClass} me-1">${tech}</span>`;
+		})
+		.join("");
 
 	return `
 		<div class="col-md-6 col-lg-4">
@@ -125,7 +143,7 @@ document.addEventListener("click", function (e) {
 	document.getElementById("modalSolution").textContent = project.solution;
 
 	document.getElementById("modalTech").innerHTML = project.technologies
-		.map((tech) => `<span class="badge text-bg-primary me-2">${tech}</span>`)
+		.map((tech) => `<span class="badge ${techClasses[tech] || "badge-primary"} me-2">${tech}</span>`)
 		.join("");
 
 	document.getElementById("modalInsights").innerHTML = project.insights.map((insight) => `<li>${insight}</li>`).join("");

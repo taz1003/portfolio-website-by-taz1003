@@ -12,9 +12,7 @@ html {
 
 body {
 	font-family: "Inter", sans-serif;
-
 	background: var(--bg);
-
 	color: var(--text);
 }
 
@@ -37,17 +35,15 @@ h5 {
 
 .project-page-btn {
 	border-radius: 50px;
-
 	padding: 10px 24px;
-
 	font-weight: 600;
-
 	transition: all 0.3s ease;
+	background: linear-gradient(90deg, #06b6d4, #4f46e5);
 }
 
 .project-page-btn:hover {
 	transform: translateY(-2px);
-
+	background: linear-gradient(90deg, #2ba7bd, #413bb5);
 	box-shadow: 0 10px 25px rgba(79, 70, 229, 0.25);
 }
 
@@ -57,7 +53,6 @@ h5 {
 
 .btn {
 	border-radius: 50px;
-
 	padding: 0.9rem 1.8rem;
 }
 
@@ -81,17 +76,13 @@ section {
 
 .skill-card {
 	background: white;
-
 	border-radius: 20px;
-
 	transition: 0.35s;
-
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
 }
 
 .skill-card:hover {
 	transform: translateY(-10px);
-
 	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
 }
 
@@ -109,50 +100,94 @@ section {
 
 .service-card {
 	background: white;
-
 	border-radius: 20px;
-
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-
 	transition: 0.35s;
 }
 
 .service-card:hover {
 	transform: translateY(-10px);
-
 	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
 }
 
 .project-card {
 	background: white;
-
 	border-radius: 20px;
-
 	overflow: hidden;
-
 	transition: 0.35s;
-
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
 }
 
 .project-card:hover {
 	transform: translateY(-10px);
-
 	box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
 }
 
 .project-card img {
 	height: 220px;
-
 	width: 100%;
-
 	object-fit: cover;
 }
 
 .badge {
 	margin-right: 6px;
-
+	border: 1px solid #000;
 	padding: 8px 12px;
+}
+
+.badge-python {
+	background: #3776ab;
+	color: white;
+}
+
+.badge-sql {
+	background: #336791;
+	color: white;
+}
+
+.badge-powerbi {
+	background: #f2c811;
+	color: #222;
+}
+
+.badge-excel {
+	background: #217346;
+	color: white;
+}
+
+.badge-pandas {
+	background: #150458;
+	color: white;
+}
+
+.badge-numpy {
+	background: #4dabcf;
+	color: white;
+}
+
+.badge-tableau {
+	background: #e97627;
+	color: white;
+}
+
+.badge-bootstrap {
+	background: #7952b3;
+	color: white;
+}
+
+.badge-javascript {
+	background: #f7df1e;
+	color: #222;
+}
+
+.badge-html {
+	background: #e34f26;
+	color: white;
+}
+
+.badge-css {
+	background: #1572b6;
+	color: white;
 }
 
 .cta-section {
@@ -161,69 +196,45 @@ section {
 
 .timeline {
 	max-width: 700px;
-
 	margin: auto;
-
 	position: relative;
-
 	padding-left: 40px;
-
 	border-left: 3px solid var(--primary);
 }
 
 .timeline-item {
 	position: relative;
-
 	margin-bottom: 50px;
 }
 
 .timeline-dot {
 	position: absolute;
-
 	left: -52px;
-
 	width: 18px;
-
 	height: 18px;
-
 	background: var(--primary);
-
 	border-radius: 50%;
 }
 
 .timeline-content {
 	background: white;
-
 	padding: 25px;
-
 	border-radius: 15px;
-
 	box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
 #topBtn {
 	position: fixed;
-
 	bottom: 25px;
-
 	right: 25px;
-
 	width: 50px;
-
 	height: 50px;
-
 	border: none;
-
 	border-radius: 50%;
-
 	background: var(--primary);
-
 	color: white;
-
 	display: none;
-
 	z-index: 999;
-
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
@@ -235,7 +246,6 @@ footer a {
 
 .project-hero {
 	padding: 120px 0 80px;
-
 	background: radial-gradient(circle at top, #dbeafe, transparent), #f7f8fa;
 }
 
@@ -245,7 +255,6 @@ footer a {
 
 .filter-btn {
 	border-radius: 50px;
-
 	padding: 10px 24px;
 }
 
@@ -255,7 +264,6 @@ footer a {
 
 .project-card img {
 	height: 240px;
-
 	object-fit: cover;
 }
 

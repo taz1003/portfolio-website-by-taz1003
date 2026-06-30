@@ -1,18 +1,23 @@
 // EmailJS integration
-function sendMail(contactForm) {
-	emailjs
-		.send("service_bdiwf64", "tazriyan", {
-			from_name: contactForm.name.value,
-			email: contactForm.emailaddress.value,
-			project_request: contactForm.projectsummary.value,
-		})
-		.then(
-			function (response) {
-				console.log("SUCCESS", response);
-			},
-			function (error) {
-				console.log("FAILED", error);
-			},
-		);
-	// return false; // To block from loading a new page
+const form = document.getElementById("contact-form");
+
+if (form) {
+	form.addEventListener("submit", function (e) {
+		e.preventDefault();
+
+		emailjs
+			.send("service_bdiwf64", "template_bywqhpk", {
+				from_name: form.name.value,
+				emailaddress: form.emailaddress.value,
+				projectsummary: form.projectsummary.value,
+			})
+			.then(() => {
+				alert("Message sent successfully!");
+				form.reset();
+			})
+			.catch((error) => {
+				console.error(error);
+				alert("Failed to send message.");
+			});
+	});
 }

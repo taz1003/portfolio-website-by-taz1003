@@ -26,7 +26,7 @@ const projects = [
 	{
 		id: 2,
 
-		title: "Sales Performance Analysis",
+		title: "Breast Cancer Diagnosis",
 
 		shortDescription: "Lorem ipsum dolor sit amet.",
 
@@ -34,7 +34,7 @@ const projects = [
 
 		image: CLOUDINARY.projects[1],
 
-		technologies: ["Excel", "SQL"],
+		technologies: ["Streamlit", "Excel", "SQL"],
 
 		problem: "Lorem ipsum",
 

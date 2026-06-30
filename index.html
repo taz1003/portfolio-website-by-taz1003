@@ -423,29 +423,25 @@
 							<p>
 								<i class="bi bi-envelope-fill me-2"></i>
 
-								example@email.com
+								stazriyan@email.com
 							</p>
 
 							<p>
 								<i class="bi bi-github me-2"></i>
 
-								github.com/username
+								github.com/taz1003
 							</p>
 
 							<p>
 								<i class="bi bi-linkedin me-2"></i>
 
-								linkedin.com/in/username
+								www.linkedin.com/in/tazriyan-sirat
 							</p>
 						</div>
 					</div>
 
 					<div class="col-lg-7">
-						<form
-							onsubmit="
-								sendMail(this);
-								return false;
-							">
+						<form id="contact-form">
 							<div class="mb-3">
 								<input type="text" class="form-control" placeholder="Your Name" name="name" required />
 							</div>
@@ -553,10 +549,6 @@
 			AOS.init({
 				duration: 900,
 				once: true,
-			});
-
-			emailjs.init({
-				publicKey: "uXOeYAky9LtqQR_EG",
 			});
 		</script>
 	</body>

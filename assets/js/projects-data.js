@@ -42,15 +42,15 @@ const projects = [
 
 		insights: ["Insight One", "Insight Two", "Insight Three"],
 
-		github: "#",
+		github: "https://github.com/taz1003/PP5-breast-cancer-diagnosis-new",
 
-		live: "#",
+		live: "https://breast-cancr-diagnosis-taz1003-db1eeca77975.herokuapp.com/",
 	},
 
 	{
 		id: 3,
 
-		title: "HR Analytics",
+		title: "Chinook Musical Database Analysis",
 
 		shortDescription: "Lorem ipsum",
 
@@ -68,7 +68,7 @@ const projects = [
 
 		github: "#",
 
-		live: "#",
+		live: "https://uopeople-my.sharepoint.com/:u:/g/personal/tazriyansirat_my_uopeople_edu/IQClzFIJEUYjT5yRqNc3uvvEAQrev2VlU6Fqc92WFi-oWkI?e=RyTfsr",
 	},
 
 	{

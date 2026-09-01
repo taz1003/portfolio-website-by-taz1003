@@ -1,4 +1,6 @@
 // EmailJS integration
+emailjs.init("uXOeYAky9LtqQR_EG");
+
 const form = document.getElementById("contact-form");
 
 if (form) {
@@ -7,17 +9,19 @@ if (form) {
 
 		emailjs
 			.send("service_bdiwf64", "template_bywqhpk", {
-				from_name: form.name.value,
-				emailaddress: form.emailaddress.value,
-				projectsummary: form.projectsummary.value,
+				name: form.name.value,
+				user_name: form.name.value,
+				user_email: form.emailaddress.value,
+				message: form.projectsummary.value,
+				time: new Date().toLocaleString(),
 			})
 			.then(() => {
 				alert("Message sent successfully!");
 				form.reset();
 			})
 			.catch((error) => {
-				console.error(error);
-				alert("Failed to send message.");
+				console.error("EmailJS Error:", error);
+				alert("Failed to send message: " + (error.text || error.message || JSON.stringify(error)));
 			});
 	});
 }

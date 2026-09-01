@@ -4,8 +4,8 @@ const CLOUDINARY = {
 
 	projects: [
 		"https://placehold.co/600x400",
-		"https://placehold.co/600x400",
-		"https://placehold.co/600x400",
+		"https://res.cloudinary.com/dyz0nyf9e/image/upload/v1786040137/Breast_Cancer_Analysis_nwq9q0.png",
+		"https://res.cloudinary.com/dyz0nyf9e/image/upload/v1786039097/Chinook_Dashboard_ryy2ir.png",
 		"https://placehold.co/600x400",
 		"https://placehold.co/600x400",
 		"https://placehold.co/600x400",
